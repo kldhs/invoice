@@ -1,0 +1,39 @@
+/*设置每一列内容居中，每一行高度*/
+.table-row-cell {
+    -fx-cell-size: 32px;
+    -fx-alignment: center;
+}
+
+/*主标题label*/
+#mainTitle {
+    -fx-font-size: 20;
+    -fx-font-family: "Microsoft YaHei";
+}
+
+/*副标题label*/
+.subtitle {
+    -fx-font-size: 18;
+    -fx-font-family: "Microsoft YaHei";
+}
+
+/*小输入框TextField*/
+.miniTextField {
+    -fx-pref-height: 26;
+    -fx-pref-width: 45;
+}
+
+/*大输入框TextField*/
+.maxTextFiled {
+    -fx-pref-height: 26;
+    -fx-pref-width: 150;
+}
+
+/*下拉选择框*/
+.midComboBox {
+    -fx-pref-width: 110;
+    -fx-pref-height: 26;
+}
+
+
+
+

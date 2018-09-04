@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="taskBorderPane" prefHeight="499.0" prefWidth="873.0" style="-fx-border-style: hidden;" stylesheets="cellCss.css" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inv.controller.HomePageController">
+    <top>
+        <BorderPane prefHeight="98.0" prefWidth="770.0">
+            <center>
+                <Label text="鸿朗内饰" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="29.0" />
+                    </font>
+                </Label>
+            </center>
+            <left>
+                <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <CheckBox layoutX="40.0" layoutY="39.0" mnemonicParsing="false" text="CheckBox" />
+               </children></Pane>
+            </left>
+            <right>
+                <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button layoutX="90.0" layoutY="45.0" mnemonicParsing="false" text="导出excel" />
+                        <Button layoutX="14.0" layoutY="45.0" mnemonicParsing="false" onAction="#add" text="新增" />
+                    </children>
+                </Pane>
+            </right>
+        </BorderPane>
+    </top>
+    <right>
+    </right>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="400.0">
+            <center>
+                <TableView fx:id="dataTable" focusTraversable="false" layoutY="98.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="400.0" style="-fx-alignment: center;">
+                    <columns>
+                        <TableColumn fx:id="select" prefWidth="75.0"  />
+                        <TableColumn fx:id="id" prefWidth="75.0" text="序号" />
+                        <TableColumn fx:id="getInvoiceDate" prefWidth="75.0" text="收票日期" />
+                        <TableColumn fx:id="company" prefWidth="75.0" text="开票单位" />
+                        <TableColumn fx:id="invoiceWord" prefWidth="75.0" text="发票代码" />
+                        <TableColumn fx:id="invoiceNum" prefWidth="75.0" text="发票号码" />
+                        <TableColumn fx:id="invoiceDate" prefWidth="75.0" text="开票日期" />
+                        <TableColumn fx:id="money" prefWidth="75.0" text="金额" />
+                        <TableColumn fx:id="tax" prefWidth="75.0" text="税额" />
+                        <TableColumn fx:id="totalTax" prefWidth="75.0" text="价税合计" />
+                        <TableColumn fx:id="makeSure" prefWidth="75.0" text="签收确认" />
+                        <TableColumn fx:id="makeSureTime" prefWidth="75.0" text="确认时间" />
+                        <TableColumn fx:id="entryNum" prefWidth="75.0" text="挂账单号" />
+                        <TableColumn fx:id="paymentDetails" prefWidth="75.0" text="付款详情" />
+                        <TableColumn fx:id="remarkF" prefWidth="75.0" text="备注1" />
+                        <TableColumn fx:id="remarkS" prefWidth="75.0" text="备注2" />
+                        <TableColumn fx:id="remarkT" prefWidth="75.0" text="备注3" />
+                        <TableColumn fx:id="edit" prefWidth="75.0" text="编辑" />
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+    </center>
+    <bottom>
+        <HBox alignment="TOP_RIGHT" prefHeight="61.0" prefWidth="188.0">
+            <children>
+                <Pane prefHeight="61.0" prefWidth="411.0">
+                    <children>
+                        <Button layoutX="90.0" layoutY="14.0" mnemonicParsing="false" text="上一页" />
+                        <Button layoutX="261.0" layoutY="14.0" mnemonicParsing="false" text="下一页" />
+                        <Label layoutX="214.0" layoutY="17.0" text="20">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="176.0" layoutY="17.0" prefHeight="24.0" prefWidth="0.0" text="1">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="198.0" layoutY="17.0" prefHeight="24.0" prefWidth="16.0" text="/">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
